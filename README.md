@@ -1,8 +1,8 @@
-# E-Commerce Business Analytics
+# E-Commerce Business Analytics & Dashboard
 
 ## Overview
 
-This project provides a comprehensive framework for analyzing e-commerce business performance using configurable Python modules and Jupyter notebooks. The analysis covers revenue trends, customer satisfaction, product performance, geographic distribution, and operational metrics.
+This project provides a comprehensive framework for analyzing e-commerce business performance using configurable Python modules, Jupyter notebooks, and an interactive Streamlit dashboard. The analysis covers revenue trends, customer satisfaction, product performance, geographic distribution, and operational metrics.
 
 ## Project Structure
 
@@ -19,6 +19,7 @@ claude-data-analysis/
 ├── business_metrics.py          # Business metrics calculation module
 ├── EDA.ipynb                    # Original analysis notebook
 ├── EDA_Refactored.ipynb         # Refactored analysis notebook
+├── app.py                       # Streamlit dashboard application
 ├── uv.lock                      # UV dependency lock file
 └── README.md                    # This file
 ```
@@ -44,6 +45,14 @@ claude-data-analysis/
 - **Configurable Parameters**: Easy customization for different time periods
 - **Professional Visualizations**: Business-ready charts with proper formatting
 - **Executive Summary**: Automated report generation with actionable insights
+
+### Streamlit Dashboard (`app.py`)
+- **Interactive Web Interface**: Professional dashboard with real-time filtering
+- **KPI Cards**: 4 key performance indicators with trend arrows
+- **2x2 Charts Grid**: Revenue trends, category performance, geographic analysis, satisfaction metrics
+- **Customer Experience Cards**: Delivery time and review score displays
+- **Professional Styling**: Uniform card heights, blue gradient color scheme
+- **Date Range Filtering**: Global filter that updates all visualizations
 
 ## Installation
 
@@ -118,6 +127,7 @@ DATA_PATH = "ecommerce_data" # Path to CSV files
 
 ### Running the Analysis
 
+#### Jupyter Notebook
 1. **Start Jupyter:**
    ```bash
    jupyter notebook EDA_Refactored.ipynb
@@ -131,6 +141,23 @@ DATA_PATH = "ecommerce_data" # Path to CSV files
    - Run all cells sequentially
    - Each section provides detailed insights and visualizations
    - Review the executive summary for key findings
+
+#### Streamlit Dashboard
+1. **Launch Dashboard:**
+   ```bash
+   streamlit run app.py
+   ```
+
+2. **Access Interface:**
+   - Open your browser to `http://localhost:8501`
+   - Use the date range filter to explore different time periods
+   - Interact with charts and hover for detailed information
+
+3. **Dashboard Features:**
+   - **Header**: Title with date range selector (applies globally)
+   - **KPI Row**: Total Revenue, Monthly Growth, Average Order Value, Total Orders
+   - **Charts Grid**: Revenue trends, Top 10 categories, Revenue by state, Delivery satisfaction
+   - **Bottom Cards**: Average delivery time, Review score with stars
 
 ## Key Metrics Explained
 
